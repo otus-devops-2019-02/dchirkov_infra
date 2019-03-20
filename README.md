@@ -29,5 +29,7 @@ Host someinternalhost
 Установен сертификат Let's Encrypt.
 
 Данные для подключения:
+````
 bastion_IP = 35.205.222.9
 someinternalhost_IP = 10.154.0.3
+````
