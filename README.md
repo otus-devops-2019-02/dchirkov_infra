@@ -1,6 +1,7 @@
 # dchirkov_infra
 dchirkov Infra repository
 
+## ДЗ к занятию 5
 ### SSH-подключение к внутреннему хосту в одну команду
 Подключение к не имеющей внешнего доступа ВМ *someinternalhost (10.154.0.3)* с локального компьютера через ВМ *bastion (35.205.222.9)* можно набрав команду:
 ````
@@ -32,4 +33,25 @@ Host someinternalhost
 ````
 bastion_IP = 35.205.222.9
 someinternalhost_IP = 10.154.0.3
+````
+
+## ДЗ к занятию 6
+Данные для подключения:
+````
+testapp_IP = 35.240.16.90
+testapp_port = 9292
+````
+
+### Создание ВМ с автозапуском скрипта
+````
+gcloud compute instances create reddit-app --boot-disk-size=10GB \
+--image-family ubuntu-1604-lts --image-project=ubuntu-os-cloud \
+--machine-type=g1-small --tags puma-server --restart-on-failure \
+--metadata-from-file startup-script=dchirkov_infra/startup_script.sh \ 
+--zone europe-west1-b
+````
+
+### Создание правила файервола посредством команды gcloud
+````
+gcloud compute firewall-rules create default-puma-server --allow=tcp:9292 --target-tags puma-server
 ````
