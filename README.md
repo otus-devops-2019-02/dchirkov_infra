@@ -55,3 +55,11 @@ gcloud compute instances create reddit-app --boot-disk-size=10GB \
 ````
 gcloud compute firewall-rules create default-puma-server --allow=tcp:9292 --target-tags puma-server
 ````
+
+## ДЗ к занятию 7
+Сделано:
+* Создан шаблон ubuntu16 для packer с приложениями ruby и mongodb
+* Создано семейство образов reddit-base в Google Cloud средствами packer
+* Создан шаблон immutable для packer с нашим приложением reddit
+* Настроен автозапуск приложения reddit
+* Создано семейство образов reddit-full в Google Cloud средствами packer
