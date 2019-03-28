@@ -19,11 +19,11 @@
     "provisioners": [
         {
             "type": "shell",
-            "script": "packer/scripts/deploy.sh"
+            "script": "scripts/deploy.sh"
         },
         {
             "type": "shell",
-            "script": "packer/scripts/createservice.sh",
+            "script": "scripts/createservice.sh",
             "execute_command": "sudo {{.Path}}"
         }
     ]
