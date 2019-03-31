@@ -1,4 +1,6 @@
 project = "infra-111111"
 public_key_path = "/etc/fstab"
+public_key_path_appuser1 = "/etc/fstab"
+public_key_path_appuser2 = "/etc/fstab"
 disk_image = "reddit-base"
 private_key_path = "~/.ssh/appuser.id_rsa"
