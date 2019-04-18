@@ -28,23 +28,23 @@ resource "google_compute_instance" "app" {
     ssh-keys = "appuser:${file(var.public_key_path)}"
   }
 
-  connection {
-    type = "ssh"
-    user = "appuser"
-    #agent = true
-    #agent_identity = "yt4SbTtHFAYhnKsYyxTtZ1EA9ROvyqpKKEhGe4W1vgI"
-    agent = false
-    private_key = "${file(var.private_key_path)}"
-  }
+//  connection {
+//    type = "ssh"
+//    user = "appuser"
+//    #agent = true
+//    #agent_identity = "yt4SbTtHFAYhnKsYyxTtZ1EA9ROvyqpKKEhGe4W1vgI"
+//    agent = false
+//    private_key = "${file(var.private_key_path)}"
+//  }
 
-  provisioner "file" {
-    content = "${data.template_file.puma.rendered}"
-    destination = "/tmp/puma.service"
-  }
+//  provisioner "file" {
+//    content = "${data.template_file.puma.rendered}"
+//    destination = "/tmp/puma.service"
+//  }
 
-  provisioner "remote-exec" {
-    script = "${path.module}/files/deploy.sh"
-  }
+//  provisioner "remote-exec" {
+//    script = "${path.module}/files/deploy.sh"
+//  }
 }
 
 resource "google_compute_firewall" "firewall_puma" {
