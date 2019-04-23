@@ -2,8 +2,6 @@
 
 # dchirkov_infra
 
-dchirkov Infra repository
-
 <details>
 <summary>ДЗ к занятию 5</summary>
 
@@ -48,6 +46,9 @@ someinternalhost_IP = 10.154.0.3
 ```
 </details>
 
+<details>
+<summary>ДЗ к занятию 6</summary>
+
 ## ДЗ к занятию 6
 
 Данные для подключения:
@@ -72,6 +73,10 @@ gcloud compute instances create reddit-app --boot-disk-size=10GB \
 ```bash
 gcloud compute firewall-rules create default-puma-server --allow=tcp:9292 --target-tags puma-server
 ```
+</details>
+
+<details>
+<summary>ДЗ к занятию 7</summary>
 
 ## ДЗ к занятию 7
 
@@ -82,6 +87,10 @@ gcloud compute firewall-rules create default-puma-server --allow=tcp:9292 --targ
 * Создан шаблон immutable для packer с нашим приложением reddit
 * Настроен автозапуск приложения reddit
 * Создано семейство образов reddit-full в Google Cloud средствами packer
+</details>
+
+<details>
+<summary>ДЗ к занятию 8</summary>
 
 ## ДЗ к занятию 8
 
@@ -103,6 +112,10 @@ gcloud compute firewall-rules create default-puma-server --allow=tcp:9292 --targ
 ```
 <resource>.<name>.<numcount>
 ```
+</details>
+
+<details>
+<summary>ДЗ к занятию 9</summary>
 
 ## ДЗ к занятию 9
 
@@ -128,6 +141,10 @@ gcloud compute firewall-rules create default-puma-server --allow=tcp:9292 --targ
 
 Добавил необходимые provisioner для деплоя приложения, для работы приложения в инстансе db поправил файл /etc/mongod.conf,
 в инстансе app добавил окружение DATABASE_URL с внутренним IP инстанса db.
+</details>
+
+<details>
+<summary>ДЗ к занятию 10</summary>
 
 ## ДЗ к занятию 10
 
@@ -155,6 +172,10 @@ inventory.sh --list
 По-хорошему нужно было написать такой скрипт (не важно на каком языке), который при выполнении в цикле смотрит какие инстансы есть
 и формирует правильный JSON-шаблон (с _meta, группами, хостами и переменными хостов). 
 Этот исполняемый файл нужно использовать как файл инвентори (либо указав в параметре -i, либо в файле ansible.cfg в переменной inventory) 
+</details>
+
+<details>
+<summary>ДЗ к занятию 11</summary>
 
 ## ДЗ к занятию 11
 
@@ -194,6 +215,8 @@ inventory = inventory.gcp.yml
 ```bash
 $ ansible-inventory --list -y
 ```
+</details>
+
 ## ДЗ к занятию 12
 
 Сделано:
