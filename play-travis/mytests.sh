@@ -40,4 +40,4 @@ cd ../..
 echo ''
 echo '--- Check ansible-lint ---'
 pwd
-ansible-lint --exclude=ansible/roles/jdauphant.nginx ansible/playbooks/site.ym
+ansible-lint --exclude=ansible/roles/jdauphant.nginx ansible/playbooks/site.yml
