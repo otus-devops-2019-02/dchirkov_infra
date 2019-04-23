@@ -23,8 +23,6 @@ module "db" {
   private_key_path = "${var.private_key_path}"
 }
 
-//module "vpc" {
-//  source = "../modules/vpc"
-
-  //  source_ranges = ["94.158.100.200/32"]
-//}
+module "vpc" {
+  source = "../modules/vpc"
+}

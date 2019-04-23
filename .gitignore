@@ -7,4 +7,4 @@ variables.json
 .terraform/
 .DS_Store
 *.retry
-infra-235113-88753d26f8cb.json
+jdauphant.nginx/

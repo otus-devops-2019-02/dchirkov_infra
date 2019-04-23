@@ -3,7 +3,7 @@ plugin: gcp_compute
 projects:
   - infra-235113
 auth_kind: serviceaccount
-service_account_file: infra-235113-88753d26f8cb.json
+service_account_file: ~/.ansible/infra-235113-88753d26f8cb.json
 filters:
 hostnames:
   - name

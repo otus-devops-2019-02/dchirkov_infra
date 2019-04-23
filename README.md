@@ -1,6 +1,11 @@
+[![Build Status](https://travis-ci.com/otus-devops-2019-02/dchirkov_infra.svg?branch=master)](https://travis-ci.com/otus-devops-2019-02/dchirkov_infra)
+
 # dchirkov_infra
 
 dchirkov Infra repository
+
+<details>
+<summary>ДЗ к занятию 5</summary>
 
 ## ДЗ к занятию 5
 
@@ -41,6 +46,7 @@ Host someinternalhost
 bastion_IP = 35.205.222.9
 someinternalhost_IP = 10.154.0.3
 ```
+</details>
 
 ## ДЗ к занятию 6
 
@@ -188,3 +194,21 @@ inventory = inventory.gcp.yml
 ```bash
 $ ansible-inventory --list -y
 ```
+## ДЗ к занятию 12
+
+Сделано:
+
+* Созданы две роли app и db
+* Созданы окружения
+* Наведен порядок в директории ansible
+* Установлена community-роль jdauphant.nginx
+* В конфигурацию terraform добавлено правило для открытия порта 80/tcp 
+* Зашифрованы два файла с данными пользователей посредством ansible-vault
+
+### Описание задания со *
+
+Динамическая инвентаризация настроена аналогичным образом, как и в предыдущем занятии. 
+
+### Описание задания со **
+
+Создан скрипт для проверки инфраструктурного кода play-travis/mytests.sh 
