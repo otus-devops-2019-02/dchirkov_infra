@@ -8,3 +8,12 @@ variables.json
 .DS_Store
 *.retry
 jdauphant.nginx/
+venv/
+
+# Vagrant & molecule
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache

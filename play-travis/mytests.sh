@@ -23,7 +23,7 @@ ssh-keygen -N "" -f ~/.ssh/appuser.id_rsa
 terraform init terraform/stage/
 terraform init terraform/prod/
 terraform validate -var-file=terraform/stage/terraform.tfvars.example terraform/stage/
-terraform validate -var-file=terraform/stage/terraform.tfvars.example terraform/prod/
+terraform validate -var-file=terraform/prod/terraform.tfvars.example terraform/prod/
 
 echo ''
 echo '--- Check tflint ---'
