@@ -2,3 +2,4 @@
   version: v2.21.1
 
 - src: https://github.com/dchirkov/reddit-db
+  name: db
